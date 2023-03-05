@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from "axios";
+import Landing from "./components/Landing.jsx"
+const options = {
+  method: 'GET',
+  url: 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather',
+  params: {city: 'Delhi'},
+  headers: {
+    'X-RapidAPI-Key': 'b00116c2f2msha3b2f1e1c665e2cp1c32b1jsnd9795651ed5b',
+    'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+  }
+};
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
 
+ 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Landing/>
+
+      <options/>
+
+
     </div>
   );
 }
