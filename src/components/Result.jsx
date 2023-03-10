@@ -1,11 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react';
+
 
 function Result() {
-  return (
-    <div>
+  // console.log('hi')
+  // flags
+  const [isError,setError]=useState(false);
+  const [isLoading,setLoading]=useState(false);
+  const [forecast,setForecast]=useState(null);
 
-    </div>
-  )
-}
+  // call the api
+  const submitRequest=location=>{
+     console.log({location});
+  };
+  return (
+    // <div></div>
+    [isError,isLoading,forecast,submitRequest]
+  );
+};
+
 
 export default Result

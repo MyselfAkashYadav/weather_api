@@ -23,7 +23,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 6.5rem;
+    margin: 1.5rem 6.5rem;
     padding: 1rem 2rem;
 }
 .display{
@@ -31,12 +31,12 @@ body{
     
     justify-content: center;
     align-items: center;
-    margin: 2.5rem auto;
+    margin: 2rem auto;
     width: 70%;
     background-color: rgb(21, 35, 35);
     
     max-width: 600rem;
-    min-height: 25rem;
+    min-height: 35rem;
     border-radius: 2em 0em 2em 0em;
 }
     
